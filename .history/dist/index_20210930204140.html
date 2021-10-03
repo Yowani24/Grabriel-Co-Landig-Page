@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW LP</title>
+    <link rel="stylesheet" href="/dist/styles.css">
+
+    <!-- --------------------FONT-FAMILY------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito+Sans:wght@200&family=Nunito:wght@200&display=swap" rel="stylesheet">
+
+    <!-- -------------------VUEJS CDN------------------ -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+
+    <script>
+        function CloseSideBar() {
+            document.getElementById("sideBar").style.marginLeft = "-100%";
+        }
+        function OpenSideBar() {
+            document.getElementById("sideBar").style.marginLeft = "0%";
+        }
+    </script>
+
+</head>
+<body>
+    <header class="tw-px-5 tw-py-5 tw-border-b-2">
+        <div class="tw-flex tw-justify-between tw-items-center md:tw-h-14">
+            <img onclick="OpenSideBar()" class="md:tw-hidden tw-w-6" src="./images/menu.svg" alt="menu">
+            <span class="tw-hidden md:tw-flex tw-items-center md:tw-self-start">
+                <img src="./images/map-pin.svg" alt="map-pin">
+                <p class="tw-ml-2">Find a Store</p>
+            </span>
+
+            <img class="tw-w-48 md:tw-w-auto tw-self-end" src="./images/logo.svg" alt="logo">
+
+            <div class="tw-flex md:tw-self-start">
+                <img class="tw-hidden md:tw-flex tw-cursor-pointer" src="./images/searchIcon.svg" alt="">
+                <img class="tw-hidden md:tw-flex tw-ml-45 tw-cursor-pointer" src="./images/wishlist.svg" alt="">
+                <img class="tw-hidden md:tw-flex tw-mx-4 tw-cursor-pointer" src="./images/signIn.svg" alt="">
+                <img class="tw-w-6 md:tw-w-auto tw-cursor-pointer" src="./images/mybag.svg" alt="">
+            </div>
+        </div>
+
+        <div>
+            <span class="tw-relative">
+                <input class="md:tw-hidden tw-w-full tw-h-10 tw-mt-4 tw-rounded-lg tw-pl-2 tw-border-2 tw-outline-none" type="text" placeholder="Search">
+                <img class="md:tw-hidden tw-absolute tw-top-0 tw-right-2" src="./images/searchIcon.svg" alt="">
+            </span>
+
+
+            <!-- -----------SIDEBAR MENU-------------- -->
+            <div id="sideBar" class="sideBar tw-bg-gray-400 tw-absolute tw-top-0 tw-left-0 tw-w-screen tw-h-screen tw-transition md:tw-hidden">
+                <div class="tw-flex tw-py-3 tw-pl-4 tw-bg-gray-600">
+                    <img onclick="CloseSideBar()" class="tw-w-8" src="./images/closeIcon.svg" alt="">
+                </div>
+                <ul class="tw-text-xl tw-mt-8">
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Engagement</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Wedding</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Necklaces</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Rings</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Earrings</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Bracelets</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Gifts</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">About</a></li>
+                </ul>
+            </div>
+            <!-- --------------------------------- -->
+
+
+            <nav class="tw-hidden md:tw-flex tw-justify-center tw-mt-8">
+                <ul class="tw-flex">
+                    <li class=""><a href="#">Engagement</a></li>
+                    <li class="tw-ml-8"><a href="#">Wedding</a></li>
+                    <li class="tw-mx-8"><a href="#">Necklaces</a></li>
+                    <li class=""><a href="#">Rings</a></li>
+                    <li class="tw-mx-8"><a href="#">Earrings</a></li>
+                    <li class=""><a href="#">Bracelets</a></li>
+                    <li class="tw-mx-8"><a href="#">Gifts</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+.loraFont{
+    font-family: 'Lora', serif;
+}
+.sideBar{
+    margin-left: -100%;
+    transition: .3s;
+}
+.showcase_bg{
+    background: #812E20;
+}
+.necklacesBannerBg{
+    background-image: url(/dist/images/necklacesBanner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

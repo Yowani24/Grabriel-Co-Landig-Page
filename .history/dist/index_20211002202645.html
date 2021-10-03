@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW LP</title>
+    <link rel="stylesheet" href="/dist/styles.css">
+
+    <!-- --------------------FONT-FAMILY------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito+Sans:wght@200&family=Nunito:wght@200&display=swap" rel="stylesheet">
+
+    <!-- -------------------VUEJS CDN------------------ -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+
+    <!-- ---------------------------SLICK---------------------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
+    <script>
+        function CloseSideBar() {
+            document.getElementById("sideBar").style.marginLeft = "-100%";
+        }
+        function OpenSideBar() {
+            document.getElementById("sideBar").style.marginLeft = "0%";
+        }
+    </script>
+
+</head>
+<body>
+    <header class="tw-px-5 tw-py-5 tw-border-b-2">
+        <div class="tw-flex tw-justify-between tw-items-center md:tw-h-14">
+            <img onclick="OpenSideBar()" class="md:tw-hidden tw-w-6" src="./images/menu.svg" alt="menu">
+            <span class="tw-hidden md:tw-flex tw-items-center md:tw-self-start">
+                <img src="./images/map-pin.svg" alt="map-pin">
+                <p class="tw-ml-2">Find a Store</p>
+            </span>
+
+            <img class="tw-w-48 md:tw-w-auto tw-self-end" src="./images/logo.svg" alt="logo">
+
+            <div class="tw-flex md:tw-self-start">
+                <img class="tw-hidden md:tw-flex tw-cursor-pointer tw-mr-4" src="./images/searchIcon.svg" alt="">
+                <img class="tw-hidden md:tw-flex tw-ml-45 tw-cursor-pointer" src="./images/wishlist.svg" alt="">
+                <img class="tw-hidden md:tw-flex tw-mx-4 tw-cursor-pointer" src="./images/signIn.svg" alt="">
+                <img class="tw-w-6 md:tw-w-auto tw-cursor-pointer" src="./images/mybag.svg" alt="">
+            </div>
+        </div>
+
+        <div>
+            <span class="tw-relative">
+                <input class="md:tw-hidden tw-w-full tw-h-10 tw-mt-4 tw-rounded-lg tw-pl-2 tw-border-2 tw-outline-none" type="text" placeholder="Search">
+                <img class="md:tw-hidden tw-absolute tw-top-0 tw-right-2" src="./images/searchIcon.svg" alt="">
+            </span>
+
+
+            <!-- -----------SIDEBAR MENU-------------- -->
+            <div id="sideBar" class="sideBar tw-bg-gray-400 tw-absolute tw-top-0 tw-left-0 tw-w-screen tw-h-screen tw-transition md:tw-hidden">
+                <div class="tw-flex tw-py-3 tw-pl-4 tw-bg-gray-600">
+                    <img onclick="CloseSideBar()" class="tw-w-8" src="./images/closeIcon.svg" alt="">
+                </div>
+                <ul class="tw-text-xl tw-mt-8">
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Engagement</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Wedding</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Necklaces</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Rings</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Earrings</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Bracelets</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Gifts</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">About</a></li>
+                </ul>
+            </div>
+            <!-- --------------------------------- -->
+
+
+            <nav class="tw-hidden md:tw-flex tw-justify-center tw-mt-8">
+                <ul class="tw-flex">
+                    <li class=""><a href="#">Engagement</a></li>
+                    <li class="tw-ml-8"><a href="#">Wedding</a></li>
+                    <li class="tw-mx-8"><a href="#">Necklaces</a></li>
+                    <li class=""><a href="#">Rings</a></li>
+                    <li class="tw-mx-8"><a href="#">Earrings</a></li>
+                    <li class=""><a href="#">Bracelets</a></li>
+                    <li class="tw-mx-8"><a href="#">Gifts</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="showcase_bg showcase md:tw-h-80 tw-bg-">
+        <div class="tw-bg-white md:tw-bg-transparent tw-flex tw-flex-col-reverse md:tw-flex-row md:tw-flex md:tw-justify-between md:tw-items-center md:tw-h-full">
+            <div class="md:tw-w-1/2 md:tw-pl-44 tw-text-black tw-px-5 tw-py-5 md:tw-py-0 md:tw-px-0">
+                <h3 class="loraFont tw-text-2xl tw-text-center md:tw-text-left md:tw-text-4xl md:tw-text-white">Bracelets</h3>
+                <p class="tw-my-5 tw-text-base md:tw-text-xl tw-font-light md:tw-leading-8 tw-text-center md:tw-text-left md:tw-text-white">Go bold with dazzling diamond bracelets, stun with sapphire, or choose a subtle piece you can wear every day.</p>
+                <p class="tw-text-base tw-cursor-pointer tw-underline tw-text-center md:tw-text-left md:tw-text-white">Shop Bracelets ></p>
+            </div>
+            <div>
+                <img class="tw-hidden md:tw-block md:tw-h-80" src="./images/lpshowcase.svg" alt="Bracelets">
+                <img class="tw-w-full md:tw-hidden" src="./images/lpshowcasemobile.svg" alt="Bracelets">
+            </div>
+        </div>
+    </section>
+
+    <div class="tw-bg-gray-200 tw-py-4 md:tw-py-8 tw-text-center md:tw-flex md:tw-justify-center md:tw-items-center">
+        <p class="loraFont tw-text-base md:tw-text-2xl tw-mb-2 tw-text-gray-900 md:tw-mr-8">You can find a store near you</p>
+        <div class="">
+            <span class="tw-flex tw-justify-center tw-items-center tw-w-min tw-mx-auto tw-relative">
+                <img class="tw-absolute tw-left-2" src="./images/map-pin.svg" alt="map-pin">
+                <input class="tw-flex tw-items-center tw-w-52 md:tw-w-64 tw-h-11 tw-rounded-l-md tw-pl-9 tw-outline-none" type="text" placeholder="0000">
+                <button class="tw-cursor-pointer tw-bg-gray-900 tw-px-6 tw-h-11 tw-rounded-r-md tw-text-white tw-tracking-widest tw-font-semibold">Find</button>
+            </span>
+            
+        </div>
+    </div>
+
+    <section id="Best_sellers">
+        <h1 class="loraFont tw-text-center tw-mt-10 tw-mb-5 tw-text-2xl md:tw-text-4xl">Best Sellers</h1>
+        <div class="BraceletSlide">
+            <div class="tw-border tw-p-1 tw-m-2 tw-text-center" v-for="item in items">
+                <img class="tw-mb-2" :src="item.ima" alt="Bracelet">
+                <h5 class="tw-text-xs md:tw-text-base">{{item.title}}</h5>
+                <p class="tw-text-xs tw-my-2 md:tw-text-base">{{item.desc}}</p>
+                <p class="tw-text-sm tw-font-semibold md:tw-text-base">{{item.price}}</p>
+            </div>
+        </div>
+
+        <div class="tw-flex tw-justify-center tw-py-3 md:tw-mt-5">
+            <button class="tw-border tw-border-gray-600 tw-font-bold tw-text-gray-600 tw-py-3 tw-px-10 tw-rounded-md tw-text-xs md:tw-text-base md:tw-font-semibold">Shop All Best Sellers</button>
+        </div>
+    </section>
+
+    <section class="md:tw-mt-14" id="Ringz">
+        <h1 class="loraFont tw-text-center tw-mt-10 tw-mb-5 tw-text-2xl md:tw-text-4xl">Shop by Style</h1>
+        <div class="BraceletSlide">
+            <div class="tw-border tw-p-1 tw-m-2 tw-text-center" v-for="item in items">
+                <img class="tw-mb-2 tw-w-full" :src="item.ima" alt="Bracelet">
+                <h5 class="tw-text-xs md:tw-text-2xl">{{item.title}}</h5>
+            </div>
+        </div>
+
+        <div class="tw-flex tw-justify-center tw-py-3 md:tw-mt-5">
+            <button class="tw-border tw-border-gray-600 tw-font-bold tw-text-gray-600 tw-py-3 tw-px-10 tw-rounded-md tw-text-xs md:tw-text-base md:tw-font-semibold">Shop All Styles</button>
+        </div>
+    </section>
+
+    <section class="tw-h-24 md:tw-h-48 tw-flex tw-justify-between md:tw-items-center tw-my-5 md:tw-my-12">
+        <img class="tw-w-2/4 tw-h-full" src="/dist/images/necklacesBanner.png" alt="Banner">
+        <span class="necklacesBannerBg tw-h-full tw-flex tw-flex-col tw-justify-center">
+            <h2 class="tw-text-base loraFont md:tw-text-4xl">Necklaces</h2>
+            <p class="tw-text-xs md:tw-text-base tw-font-light md:tw-w-3/4 tw-my-1 md:tw-my-4">Embellish your neckline with our handcrafted necklaces. <span class="current_span">A Gabriel & Co. necklace has the power to transfom an entire look.</span> </p>
+            <p class="tw-text-xs md:tw-text-base tw-cursor-pointer tw-underline tw-text-center md:tw-text-left tw-font-light md:tw-font-semibold tw-w-max">Shop Necklaces ></p>
+        </span>
+    </section>
+
+    <section id="Shop_by_Fine_Metal">
+        <h1 class="loraFont tw-text-center tw-mt-10 tw-mb-5 tw-text-2xl md:tw-text-4xl">Shop by Fine Metal</h1>
+        <div class="tw-flex tw-flex-wrap tw-justify-center">
+            <div class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-border tw-py-1 md:tw-py-5 tw-m-1 tw-text-center tw-w-24 md:tw-w-44 md:tw-m-2" v-for="item in items">
+                <img class="tw-mb-2 tw-w-16 md:tw-w-20" :src="item.ima" alt="Gold Metals">
+                <h5 class="tw-text-xs md:tw-text-2xl md:tw-mt-3">{{item.title}}</h5>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="Shop_by_Price_Range">
+        <h1 class="loraFont tw-text-center tw-mt-10 tw-mb-5 tw-text-2xl md:tw-text-4xl">Shop by Price Range</h1>
+        <div class="tw-flex tw-flex-col md:tw-flex-row tw-flex-wrap tw-justify-center tw-items-center">
+            <div class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-border tw-py-3 md:tw-py-5 tw-m-1 tw-text-center tw-w-60 md:tw-w-60 md:tw-h-60 md:tw-font-semibold md:tw-m-2 hover:tw-bg-gray-100" v-for="item in items">
+                <h5 class="tw-text-xs md:tw-text-2xl md:tw-mt-3 tw-text-red-800 md:tw-text-gray-800">{{item.price}}</h5>
+            </div>
+        </div>
+
+    </section>
+    
+    <section id="Shop_by_Month">
+        <h1 class="loraFont tw-text-center tw-mt-10 tw-mb-5 tw-text-2xl md:tw-text-4xl">Shop by Month</h1>
+        <div class="tw-flex tw-flex-wrap tw-justify-center md:tw-w-4/5 md:tw-mx-auto">
+            <div class="tw-cursor-pointer tw-flex tw-flex-col tw-justify-center tw-items-center tw-border tw-py-1 md:tw-py-5 tw-m-1 tw-text-center tw-w-16 md:tw-w-32 md:tw-m-4" v-for="item in items">
+                <img class="tw-mb-2 tw-w-7 md:tw-w-12" :src="item.ima" alt="Gold Metals">
+                <h5 class="tw-text-xs md:tw-text-xl md:tw-mt-3">{{item.title}}</h5>
+            </div>
+        </div>
+
+        <div class="tw-flex tw-justify-center tw-py-3 md:tw-mt-5">
+            <button class="tw-border tw-border-gray-600 tw-font-bold tw-text-gray-600 tw-py-3 tw-px-10 tw-rounded-md tw-text-xs md:tw-text-base md:tw-font-semibold">Shop All Months</button>
+        </div>
+    </section>
+
+    <section class="Ringzbanner tw-relative tw-h-36 md:tw-h-60 tw-flex tw-flex-row-reverse tw-justify-center tw-items-center md:tw-items-center tw-bg-red-300 tw-my-5 md:tw-my-12">
+        <img class="tw-h-full" src="./images/ringzbannerbgima.svg" alt="Banner">
+        <span class="tw-absolute tw-ml-5 tw-h-full tw-left-0 tw-z-50 md:tw-ml-40 md:tw-w-2/4  tw-h-full tw-flex tw-flex-col tw-justify-center">
+            <h2 class="tw-text-base loraFont md:tw-text-4xl">Rings</h2>
+            <p class="tw-text-xs md:tw-text-base tw-font-light tw-w-40 md:tw-w-3/4 tw-my-1 md:tw-my-4">Choose a bold style or make a subtle statement with our vast array of ring styles. <span class="current_span">Find the color, stone, metal, or pattern that makes you swoon. Gabriel & Co. selection extensive and unparallede</span> </p>
+            <p class="tw-text-xs md:tw-text-base tw-cursor-pointer tw-underline tw-text-center md:tw-text-left tw-font-light md:tw-font-semibold tw-w-max">Shop Rings ></p>
+        </span>
+    </section>
+
+    <section class="">
+        <div class="tw-flex tw-justify-center">
+            <div class="tw-mr-2">
+                <img class="md:tw-w-80" src="./images/premium1.svg" alt="">
+            </div>
+            <div class="tw-flex tw-flex-col tw-justify-between">
+                <div>
+                    <img class="md:tw-w-80" src="./images/premium2.svg" alt="">
+                </div>
+                <div>
+                    <img class="md:tw-w-80" src="./images/premiun3.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="tw-flex tw-justify-center tw-py-3 md:tw-mt-5">
+            <button class="tw-border tw-border-gray-600 tw-font-bold tw-text-gray-600 tw-py-3 tw-px-10 tw-rounded-md tw-text-xs md:tw-text-base md:tw-font-semibold">Shop Premiun Collections</button>
+        </div>
+    </section>
+
+    <section class="EaringBannerBg tw-h-32 md:tw-h-48 tw-flex tw-justify-between md:tw-items-center tw-my-5 md:tw-my-12">
+        <img class="tw-hidden md:tw-block tw-w-2/4 tw-h-full" src="./images/earingbanner.svg" alt="Banner">
+        <img class="md:tw-hidden tw-w-1/2 tw-h-full" src="./images/earingbannerima2.svg" alt="Banner">
+        <span class="EaringBannerBg tw-text-white tw-w-1/2 tw-h-full tw-flex tw-flex-col tw-justify-center">
+            <h2 class="tw-text-base loraFont md:tw-text-4xl">Earings</h2>
+            <p class="tw-text-xs tw-w-36 md:tw-text-base tw-font-light md:tw-w-3/4 tw-my-1 md:tw-my-4"><span class="current_span">When it comes to your jewelry wardrobe, eareings are a mainstary. Choose a pair that captivates from Gabriel & Co.</span> From stylish pearls to shimmering diamond studs, there's a pair for every time and place.</p>
+            <p class="tw-text-xs md:tw-text-base tw-cursor-pointer tw-underline tw-text-center md:tw-text-left tw-font-light md:tw-font-semibold tw-w-max">Shop Earrings ></p>
+        </span>
+    </section>
+
+    <section class="commitment">
+        
+        <div class="tw-mt-12 tw-flex tw-flex-col-reverse md:tw-flex-row-reverse md:tw-justify-center md:tw-items-center md:tw-w-4/5 md:tw-mx-auto">
+            <div class="tw-mt-5 tw-px-5 md:tw-px-8">
+                <h5 class="loraFont tw-text-xl tw-text-center md:tw-text-left md:tw-text-4xl md:tw-mb-8">Gabriel & Co. Commitment</h5>
+                <div id="commitment">
+                    <div class="tw-flex tw-items-center tw-my-3 md:tw-my-5" v-for="item in items">
+                        <img class="tw-w-6" src="./images/check-circlegray.svg" alt="">
+                        <p class="tw-ml-2 tw-text-sm tw-tracking-wide md:tw-text-base">{{item.desc}}</p>
+                    </div>
+                </div>
+                <p class="tw-text-center tw-underline md:tw-hidden">Learn more</p>
+            </div>
+    
+            <img class="tw-w-full md:tw-w-auto md:tw-hidden" src="./images/commitmentimamobile.svg" alt="">
+            <img class="tw-hidden md:tw-block tw-w-full md:tw-w-auto" src="./images/commitmentima2.svg" alt="">
+        </div>
+
+        <div class="tw-border md:tw-w-8/12 tw-mx-auto tw-py-8 tw-flex tw-justify-center tw-py-3 tw-my-20">
+            <button class="tw-bg-gray-800 tw-uppercase tw-border tw-border-gray-600 tw-font-bold tw-text-white tw-py-3 tw-px-10 tw-rounded-md tw-text-xs md:tw-text-base md:tw-font-semibold">Shop All Bracelets</button>
+        </div>
+    </section>
+
+    <section class="md:tw-px-36">
+        <div class="tw-flex tw-flex-col md:tw-flex-row tw-justify-between">
+            <div class="tw-mb-10">
+                <h3 class="loraFont tw-text-center tw-text-2xl md:tw-text-4xl">Popular Searches</h3>
+                <span>
+                    <p class="tw-text-xl tw-underline tw-cursor-pointer tw-mb-2">Vintage Rngagement Rings</p>
+                    <p class="tw-text-xl tw-underline tw-cursor-pointer tw-mb-2">Rose Gold Engagement Rings</p>
+                    <p class="tw-text-xl tw-underline tw-cursor-pointer tw-mb-2">Halo Engagement Rings</p>
+                    <p class="tw-text-xl tw-underline tw-cursor-pointer tw-mb-2">Wedding Gold Rings</p>
+                    <p class="tw-text-xl tw-underline tw-cursor-pointer tw-mb-2">Princess Engagement Rings</p>
+                    <p class="tw-text-xl tw-underline tw-cursor-pointer tw-mb-2">Oval Engagement Rings</p>
+                    <p class="tw-text-xl tw-underline tw-cursor-pointer tw-mb-2">Sapphire Engagement Rings</p>
+                    <p class="tw-text-xl tw-underline tw-cursor-pointer tw-mb-2">Emerald Engagement Rings</p>
+                    <p class="tw-text-xl tw-underline tw-cursor-pointer tw-mb-2" v>White Gold Engagement Rings</p>
+                    <p class="tw-text-xl tw-underline tw-cursor-pointer tw-mb-2">Rose Gold Engagement Rings</p>
+                    <p class="tw-text-xl tw-underline tw-cursor-pointer tw-mb-2">Cushion Cut Engagement Rings</p>
+                </span>
+            </div>
+    
+            <div>
+                <h3 class="loraFont tw-text-center tw-text-2xl md:tw-text-4xl">Frequently Asked Questions</h3>
+                <div>
+                    <div>How much to spend on an engagement ring?</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="footer tw-mt-12 tw-border-t-2 tw-pt-8">
+        
+        <div class="tw-px-5 md:tw-w-4/5 md:tw-mx-auto">
+            <div class="md:tw-flex md:tw-justify-between">
+                <div>
+                    <div class="md:tw-flex md:tw-items-start">
+                        <div>
+                            <h3 class="tw-text-base tw-font-semibold tw-tracking-wider tw-mb-5">Shop</h3>
+                            <p class="tw-text-sm tw-mt-2">Bridal</p>
+                            <p class="tw-text-sm tw-mt-2">Fashion</p>
+                            <p class="tw-text-sm tw-mt-2">Gifts</p>
+                            <p class="tw-text-sm tw-mt-2">Current Promotions</p>
+                        </div>
+                        <div class="tw-my-6 md:tw-my-0 md:tw-mx-20">
+                            <h3 class="tw-text-base tw-font-semibold tw-tracking-wider tw-mb-5">Our Company</h3>
+                            <p class="tw-text-sm tw-mt-2">About Us</p>
+                            <p class="tw-text-sm tw-mt-2">Store Locator</p>
+                            <p class="tw-text-sm tw-mt-2">Blog</p>
+                            <p class="tw-text-sm tw-mt-2">Afiliate Program</p>
+                            <p class="tw-text-sm tw-mt-2">Retailer Login</p>
+                        </div>
+                        <div>
+                            <h3 class="tw-text-base tw-font-semibold tw-tracking-wider tw-mb-5">Help</h3>
+                            <p class="tw-text-sm tw-mt-2">Contact</p>
+                            <p class="tw-text-sm tw-mt-2">Shipping & Return Policy</p>
+                            <p class="tw-text-sm tw-mt-2">Privacy Policy</p>
+                            <p class="tw-text-sm tw-mt-2">Warranty</p>
+                            <p class="tw-text-sm tw-mt-2">Sitemap</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tw-mt-6">
+                        <p class="tw-text-base tw-font-semibold tw-tracking-wider">Payments Methods</p>
+                        <span class="tw-flex tw-mt-2">
+                            <img src="./images/Visa.svg" alt="">
+                            <img class="tw-ml-2" src="./images/Mastercard.svg" alt="">
+                            <img class="tw-mx-2" src="./images/american-express.svg" alt="">
+                            <img src="./images/Discover.svg" alt="">
+                        </span>
+                    </div>
+        
+                </div>
+    
+                <div>
+                    <div>
+                        <div class="tw-mt-8 md:tw-flex">
+                            <p class="tw-text-base tw-font-semibold tw-tracking-wider tw-mb-5 md:tw-mb-0">Follow us</p>
+                            <span class="tw-flex tw-justify-between tw-border-b-2 tw-pb-6 md:tw-pb-4 md:tw-border-0">
+                                <img class="md:tw-mx-5" src="./images/facebookIcon.svg" alt="">
+                                <img src="./images/instagramIcon.svg" alt="">
+                                <img class="md:tw-mx-5" src="./images/pinterestIcon.svg" alt="">
+                                <img src="./images/youtubeIcon.svg" alt="">
+                                <img class="md:tw-mx-5" src="./images/twitterIcon.svg" alt="">
+                                <img src="./images/linkedinIcon.svg" alt="">
+                            </span>
+                        </div>
+        
+                    </div>
+        
+                    <div class="tw-mt-8 md:tw-mt-0">
+                        <p class="tw-text-xl tw-text-black tw-text-center md:tw-text-left tw-tracking-wider md:tw-w-64">Sign up for speacil offers and other perks</p>
+                        <div class="tw-flex tw-justify-center md:tw-justify-start tw-mt-6">
+                            <input class="tw-w-48 md:tw-w-60 tw-h-12 tw-border-2 tw-pl-2 tw-rounded-l-md tw-outline-none" type="text" placeholder="Email">
+                            <button class="tw-bg-gray-800 tw-h-12 tw-px-4 tw-text-white tw-text-sm tw-font-semibold tw-rounded-r-md">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="tw-my-12 tw-flex tw-justify-center">
+                <img src="./images/footerLogo.svg" alt="">
+            </div>
+        </div>
+
+        <div class="tw-py-6 md:tw-py-1 tw-bg-gray-100 md:tw-flex md:tw-items-center md:tw-justify-center">
+            <p class="tw-text-xs tw-text-center tw-tracking-wider tw-px-8 md:tw-px-0">Gabriel & Co. 545 West 45th Street New York, NY, 10036</p>
+            <p class="tw-text-xs tw-text-center tw-my-4 md:tw-mx-8">(212) 519 1400</p>
+            <p class="tw-text-xs tw-text-center">cs@gabrielny.com</p>
+            <img class="tw-hidden md:tw-block tw-ml-8 tw-cursor-pointer" src="./images/bbblogo.svg" alt="">
+        </div>
+
+    </section>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#otherproducts',
+            data: {
+                items: [
+                    {ima:'./images/imagee1.svg', desc:'Engagement'},
+                    {ima:'./images/imagee2.svg', desc:'Earrings'},
+                    {ima:'./images/imagee3.svg', desc:'Wedding'},
+                    {ima:'./images/imagee4.svg', desc:'Bracelets'},
+                    // {ima:'./images/imagee5.svg', desc:'Rings'},
+                    {ima:'./images/imagee6.svg', desc:'Mens'},
+                    {ima:'./images/imagee7.svg', desc:'Necklaces'}
+                ]
+            }
+        });
+        var app = new Vue({
+            el:'#commitment',
+            data: {
+                items: [
+                    {desc:'Life Warranty'},
+                    {desc:'One-year coverage of damages'},
+                    {desc:'Certificate of Authenticity'},
+                    {desc:'Complimentary cleaning'},
+                    {desc:'Free Shipping to anywhere'},
+                    {desc:'30 Day Hassle-Free Returns'}
+                ]
+            }
+        });
+        var app = new Vue({
+            el:'#Best_sellers',
+            data: {
+                items: [
+                    {ima:'/dist/images/Rectangle.svg',title:'TB419OWB4JJ', desc:'18K White Gold Diamond Spikes Tennis Bracelet', price:'$ 1000'},
+                    {ima:'/dist/images/Rectangle.svg',title:'TB419OWB4JJ', desc:'18K White Gold Diamond Spikes Tennis Bracelet', price:'$ 1000'},
+                    {ima:'/dist/images/Rectangle.svg',title:'TB419OWB4JJ', desc:'18K White Gold Diamond Spikes Tennis Bracelet', price:'$ 1000'},
+                    {ima:'/dist/images/Rectangle.svg',title:'TB419OWB4JJ', desc:'18K White Gold Diamond Spikes Tennis Bracelet', price:'$ 1000'},
+                    {ima:'/dist/images/Rectangle.svg',title:'TB419OWB4JJ', desc:'18K White Gold Diamond Spikes Tennis Bracelet', price:'$ 1000'},
+
+                ]
+            }
+        });
+
+        var app = new Vue({
+            el:'#Ringz',
+            data: {
+                items: [
+                    {ima:'./images/ringz1.svg',title:'Bangle'},
+                    {ima:'./images/ringz2.svg',title:'Chain'},
+                    {ima:'./images/ringz1.svg',title:'Charm'},
+                    {ima:'./images/ringz2.svg',title:'Cross'},
+                    {ima:'./images/ringz1.svg',title:'TB419OWB4JJ'},
+
+                ]
+            }
+        });
+        
+
+        var app = new Vue({
+            el:'#Shop_by_Fine_Metal',
+            data: {
+                items: [
+                    {ima:'./images/finemetal1.svg',title:'White Gold'},
+                    {ima:'./images/finemetal2.svg',title:'Yellow Gold'},
+                    {ima:'./images/finemetal3.svg',title:'Rose Gold'},
+                    {ima:'./images/finemetal4.svg',title:'Silver'},
+                    {ima:'./images/finemetal5.svg',title:'Mixed'},
+                ]
+            }
+        });
+
+        var app = new Vue({
+            el:'#Shop_by_Month',
+            data: {
+                items: [
+                    {ima:'./images/month1.svg',title:'January'},
+                    {ima:'./images/month2.svg',title:'Frebruary'},
+                    {ima:'./images/month3.svg',title:'March'},
+                    {ima:'./images/month4.svg',title:'April'},
+                    {ima:'./images/month5.svg',title:'May'},
+                    {ima:'./images/month6.svg',title:'June'},
+                    {ima:'./images/month7.svg',title:'July'},
+                    {ima:'./images/month8.svg',title:'August'},
+                    {ima:'./images/month9.svg',title:'September'},
+                    {ima:'./images/month10.svg',title:'October'},
+                    {ima:'./images/month11.svg',title:'November'},
+                    {ima:'./images/month12.svg',title:'December'},
+                ]
+            }
+        });
+
+        var app = new Vue({
+            el:'#Shop_by_Price_Range',
+            data: {
+                items: [
+                    {price:'500$ or Less'},
+                    {price:'501$ to 1.000$'},
+                    {price:'1.000$ to 2.500$'},
+                    {price:'2.501$ and more'},
+                ]
+            }
+        });
+
+        var app = new Vue({
+            el:'#commitment',
+            data: {
+                items: [
+                    {desc:'Life Warranty'},
+                    {desc:'One-year coverage of damages'},
+                    {desc:'Certificate of Authenticity'},
+                    {desc:'Complimentary cleaning'},
+                    {desc:'Free Shipping to anywhere'},
+                    {desc:'30 Day Hassle-Free Returns'}
+                ]
+            }
+        });
+
+
+        
+        $('.BraceletSlide').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows:false,
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+                },
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+        
+    </script>
+</body>
+</html>

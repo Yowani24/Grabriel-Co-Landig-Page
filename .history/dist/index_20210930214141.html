@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW LP</title>
+    <link rel="stylesheet" href="/dist/styles.css">
+
+    <!-- --------------------FONT-FAMILY------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito+Sans:wght@200&family=Nunito:wght@200&display=swap" rel="stylesheet">
+
+    <!-- -------------------VUEJS CDN------------------ -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+
+    <script>
+        function CloseSideBar() {
+            document.getElementById("sideBar").style.marginLeft = "-100%";
+        }
+        function OpenSideBar() {
+            document.getElementById("sideBar").style.marginLeft = "0%";
+        }
+    </script>
+
+</head>
+<body>
+    <header class="tw-px-5 tw-py-5 tw-border-b-2">
+        <div class="tw-flex tw-justify-between tw-items-center md:tw-h-14">
+            <img onclick="OpenSideBar()" class="md:tw-hidden tw-w-6" src="./images/menu.svg" alt="menu">
+            <span class="tw-hidden md:tw-flex tw-items-center md:tw-self-start">
+                <img src="./images/map-pin.svg" alt="map-pin">
+                <p class="tw-ml-2">Find a Store</p>
+            </span>
+
+            <img class="tw-w-48 md:tw-w-auto tw-self-end" src="./images/logo.svg" alt="logo">
+
+            <div class="tw-flex md:tw-self-start">
+                <img class="tw-hidden md:tw-flex tw-cursor-pointer" src="./images/searchIcon.svg" alt="">
+                <img class="tw-hidden md:tw-flex tw-ml-45 tw-cursor-pointer" src="./images/wishlist.svg" alt="">
+                <img class="tw-hidden md:tw-flex tw-mx-4 tw-cursor-pointer" src="./images/signIn.svg" alt="">
+                <img class="tw-w-6 md:tw-w-auto tw-cursor-pointer" src="./images/mybag.svg" alt="">
+            </div>
+        </div>
+
+        <div>
+            <span class="tw-relative">
+                <input class="md:tw-hidden tw-w-full tw-h-10 tw-mt-4 tw-rounded-lg tw-pl-2 tw-border-2 tw-outline-none" type="text" placeholder="Search">
+                <img class="md:tw-hidden tw-absolute tw-top-0 tw-right-2" src="./images/searchIcon.svg" alt="">
+            </span>
+
+
+            <!-- -----------SIDEBAR MENU-------------- -->
+            <div id="sideBar" class="sideBar tw-bg-gray-400 tw-absolute tw-top-0 tw-left-0 tw-w-screen tw-h-screen tw-transition md:tw-hidden">
+                <div class="tw-flex tw-py-3 tw-pl-4 tw-bg-gray-600">
+                    <img onclick="CloseSideBar()" class="tw-w-8" src="./images/closeIcon.svg" alt="">
+                </div>
+                <ul class="tw-text-xl tw-mt-8">
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Engagement</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Wedding</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Necklaces</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Rings</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Earrings</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Bracelets</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">Gifts</a></li>
+                    <li class="hover:tw-bg-gray-500 tw-py-3 tw-pl-8 hover:tw-font-semibold hover:tw-text-white"><a href="">About</a></li>
+                </ul>
+            </div>
+            <!-- --------------------------------- -->
+
+
+            <nav class="tw-hidden md:tw-flex tw-justify-center tw-mt-8">
+                <ul class="tw-flex">
+                    <li class=""><a href="#">Engagement</a></li>
+                    <li class="tw-ml-8"><a href="#">Wedding</a></li>
+                    <li class="tw-mx-8"><a href="#">Necklaces</a></li>
+                    <li class=""><a href="#">Rings</a></li>
+                    <li class="tw-mx-8"><a href="#">Earrings</a></li>
+                    <li class=""><a href="#">Bracelets</a></li>
+                    <li class="tw-mx-8"><a href="#">Gifts</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="showcase md:tw-h-80 tw-bg-">
+        <div class="md:tw-flex md:tw-justify-between md:tw-items-center md:tw-h-full">
+            <div class="showcase_bg md:tw-w-1/2 md:tw-pl-44">
+                <h3 class="loraFont md:tw-text-4xl md:tw-mb-5 tw-text-white">Bracelets</h3>
+                <p class="md:tw-text-xl tw-font-light md:tw-leading-8 md:tw-mb-5 tw-text-white">Go bold with dazzling diamond bracelets, stun with sapphire, or choose a subtle piece you can wear every day.</p>
+                <p class="tw-text-base tw-cursor-pointer tw-underline tw-text-white">Shop Bracelets ></p>
+            </div>
+            <div>
+                <img class="tw-hidden md:tw-block md:tw-h-80" src="./images/lpshowcase.svg" alt="Bracelets">
+                <img class="md:tw-hidden" src="./images/lpshowcasemobile.svg" alt="Bracelets">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="footer tw-mt-12 tw-border-t-2 tw-pt-8">
+        
+        <div class="tw-px-5 md:tw-w-4/5 md:tw-mx-auto">
+            <div class="md:tw-flex md:tw-justify-between">
+                <div>
+                    <div class="md:tw-flex md:tw-items-start">
+                        <div>
+                            <h3 class="tw-text-base tw-font-semibold tw-tracking-wider tw-mb-5">Shop</h3>
+                            <p class="tw-text-sm tw-mt-2">Bridal</p>
+                            <p class="tw-text-sm tw-mt-2">Fashion</p>
+                            <p class="tw-text-sm tw-mt-2">Gifts</p>
+                            <p class="tw-text-sm tw-mt-2">Current Promotions</p>
+                        </div>
+                        <div class="tw-my-6 md:tw-my-0 md:tw-mx-20">
+                            <h3 class="tw-text-base tw-font-semibold tw-tracking-wider tw-mb-5">Our Company</h3>
+                            <p class="tw-text-sm tw-mt-2">About Us</p>
+                            <p class="tw-text-sm tw-mt-2">Store Locator</p>
+                            <p class="tw-text-sm tw-mt-2">Blog</p>
+                            <p class="tw-text-sm tw-mt-2">Afiliate Program</p>
+                            <p class="tw-text-sm tw-mt-2">Retailer Login</p>
+                        </div>
+                        <div>
+                            <h3 class="tw-text-base tw-font-semibold tw-tracking-wider tw-mb-5">Help</h3>
+                            <p class="tw-text-sm tw-mt-2">Contact</p>
+                            <p class="tw-text-sm tw-mt-2">Shipping & Return Policy</p>
+                            <p class="tw-text-sm tw-mt-2">Privacy Policy</p>
+                            <p class="tw-text-sm tw-mt-2">Warranty</p>
+                            <p class="tw-text-sm tw-mt-2">Sitemap</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tw-mt-6">
+                        <p class="tw-text-base tw-font-semibold tw-tracking-wider">Payments Methods</p>
+                        <span class="tw-flex tw-mt-2">
+                            <img src="./images/Visa.svg" alt="">
+                            <img class="tw-ml-2" src="./images/Mastercard.svg" alt="">
+                            <img class="tw-mx-2" src="./images/american-express.svg" alt="">
+                            <img src="./images/Discover.svg" alt="">
+                        </span>
+                    </div>
+        
+                </div>
+    
+                <div>
+                    <div>
+                        <div class="tw-mt-8 md:tw-flex">
+                            <p class="tw-text-base tw-font-semibold tw-tracking-wider tw-mb-5 md:tw-mb-0">Follow us</p>
+                            <span class="tw-flex tw-justify-between tw-border-b-2 tw-pb-6 md:tw-pb-4 md:tw-border-0">
+                                <img class="md:tw-mx-5" src="./images/facebookIcon.svg" alt="">
+                                <img src="./images/instagramIcon.svg" alt="">
+                                <img class="md:tw-mx-5" src="./images/pinterestIcon.svg" alt="">
+                                <img src="./images/youtubeIcon.svg" alt="">
+                                <img class="md:tw-mx-5" src="./images/twitterIcon.svg" alt="">
+                                <img src="./images/linkedinIcon.svg" alt="">
+                            </span>
+                        </div>
+        
+                    </div>
+        
+                    <div class="tw-mt-8 md:tw-mt-0">
+                        <p class="tw-text-xl tw-text-black tw-text-center md:tw-text-left tw-tracking-wider md:tw-w-64">Sign up for speacil offers and other perks</p>
+                        <div class="tw-flex tw-justify-center md:tw-justify-start tw-mt-6">
+                            <input class="tw-w-48 md:tw-w-60 tw-h-12 tw-border-2 tw-pl-2 tw-rounded-l-md tw-outline-none" type="text" placeholder="Email">
+                            <button class="tw-bg-gray-800 tw-h-12 tw-px-4 tw-text-white tw-text-sm tw-font-semibold tw-rounded-r-md">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="tw-my-12 tw-flex tw-justify-center">
+                <img src="./images/footerLogo.svg" alt="">
+            </div>
+        </div>
+
+        <div class="tw-py-6 md:tw-py-1 tw-bg-gray-100 md:tw-flex md:tw-items-center md:tw-justify-center">
+            <p class="tw-text-xs tw-text-center tw-tracking-wider tw-px-8 md:tw-px-0">Gabriel & Co. 545 West 45th Street New York, NY, 10036</p>
+            <p class="tw-text-xs tw-text-center tw-my-4 md:tw-mx-8">(212) 519 1400</p>
+            <p class="tw-text-xs tw-text-center">cs@gabrielny.com</p>
+            <img class="tw-hidden md:tw-block tw-ml-8 tw-cursor-pointer" src="./images/bbblogo.svg" alt="">
+        </div>
+
+    </section>
+
+
+
+    ]<script>
+        var app = new Vue({
+            el:'#otherproducts',
+            data: {
+                items: [
+                    {ima:'./images/imagee1.svg', desc:'Engagement'},
+                    {ima:'./images/imagee2.svg', desc:'Earrings'},
+                    {ima:'./images/imagee3.svg', desc:'Wedding'},
+                    {ima:'./images/imagee4.svg', desc:'Bracelets'},
+                    // {ima:'./images/imagee5.svg', desc:'Rings'},
+                    {ima:'./images/imagee6.svg', desc:'Mens'},
+                    {ima:'./images/imagee7.svg', desc:'Necklaces'}
+                ]
+            }
+        });
+        var app = new Vue({
+            el:'#commitment',
+            data: {
+                items: [
+                    {desc:'Life Warranty'},
+                    {desc:'One-year coverage of damages'},
+                    {desc:'Certificate of Authenticity'},
+                    {desc:'Complimentary cleaning'},
+                    {desc:'Free Shipping to anywhere'},
+                    {desc:'30 Day Hassle-Free Returns'}
+                ]
+            }
+        });
+        var app = new Vue({
+            el:'#Browse_online',
+            data: {
+                items: [
+                    {ima:'./images/imagge1.svg',title:'Choose a Ring', desc:'With the biggest selection of engagement and bridal rings in the industry, take your time and browse all the different collections offered on the website.'},
+                    {ima:'./images/imagge2.svg',title:'Book Appointment', desc:'Click on the Book Appointment button will take you to our conceirge appointment page for schedule an appointment.'},
+                    {ima:'./images/imagge3.svg',title:'Visiting the Store', desc:'Take a trip to the local store and try on the selected gabriel & Co. ring(s). No preassure, no commitments.'},
+                ]
+            }
+        });
+        
+    </script>
+</body>
+</html>
