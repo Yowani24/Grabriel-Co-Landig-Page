@@ -18,6 +18,8 @@
     <!-- ---------------------------SLICK---------------------- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 
     <script>
         function CloseSideBar() {
@@ -478,53 +480,50 @@
             el:'#commitment',
             data: {
                 items: [
-                    {desc:'Life Warranty for any manufacturing on registered styles'},
-                    {desc:'One-year coverage of damages from normal wear & tear on registered styles'},
-                    {desc:'Certificate of Authenticity with unique serial number'},
-                    {desc:'Complimentary cleaning twice a year at a retail partner near you'},
-                    {desc:'Free Shipping to anywhere within the U.S'},
+                    {desc:'Life Warranty'},
+                    {desc:'One-year coverage of damages'},
+                    {desc:'Certificate of Authenticity'},
+                    {desc:'Complimentary cleaning'},
+                    {desc:'Free Shipping to anywhere'},
                     {desc:'30 Day Hassle-Free Returns'}
                 ]
             }
         });
-        
-        
-    </script>
 
-    <script>
-        $(document).ready(function(){
-            $('.BraceletSlide').slick({
-                infinite: true,
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                arrows:false,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: true
-                    }
-                },
+
+        
+        $('.BraceletSlide').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows:false,
+            responsive: [
                 {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
                 }
-            ]
-        });
-    })
+                },
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+        
     </script>
 </body>
 </html>
