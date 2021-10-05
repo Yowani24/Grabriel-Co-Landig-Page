@@ -115,33 +115,34 @@
         </div>
     </div>
 
-    <section id="Best_sellers">
-        <h1 class="loraFont tw-text-center tw-mt-10 tw-mb-5 tw-text-2xl md:tw-text-4xl">Best Sellers</h1>
-        <div class="BraceletSlide">
-            <div class="tw-border tw-p-1 tw-m-2 tw-text-center" v-for="item in items">
-                <img class="tw-mb-2" :src="item.ima" alt="Bracelet">
-                <h5 class="tw-text-xs md:tw-text-base">{{item.title}}</h5>
-                <p class="tw-text-xs tw-my-2 md:tw-text-base">{{item.desc}}</p>
-                <p class="tw-text-sm tw-font-semibold md:tw-text-base">{{item.price}}</p>
-            </div>
+    <section class="tw-h-72 tw-mt-5 tw-mb-20 md:tw-flex md:tw-justify-between lg:tw-px-5">
+        <div class="tw-m-2 md:tw-pl-2 md:tw-pb-10 lg:tw-flex lg:tw-flex-col md:tw-justify-end md:tw-items-start">
+            <h2 class="loraFont tw-text-2xl tw-text-center tw-mb-5 md:tw-text-left md:tw-text-4xl">Best Sellers</h2>
+            <p class="tw-text-base tw-text-center tw-px-10 md:tw-text-left md:tw-p-0 md:tw-text-base md:tw-text-left">Shop our curated collection of beloved favorites and bestsellers.</p>
         </div>
-
-        <div class="tw-flex tw-justify-center tw-py-3 md:tw-mt-5">
-            <button class="tw-border tw-border-gray-600 tw-font-bold tw-text-gray-600 tw-py-3 tw-px-10 tw-rounded-md tw-text-xs md:tw-text-base md:tw-font-semibold">Shop All Best Sellers</button>
+        <div class="bestSellers md:tw-w-3/4" id="bestSellers">
+            <div v-for="item in items" class="bestSelerList tw-m-2">
+                <img class="md:tw-w-full" :src="item.ima" alt="">
+                <p class="tw-text-center tw-mt-2 md:tw-text-xl">{{item.title}}</p>
+                <p class="tw-hidden tw-text-center tw-mt-1">{{item.desc}}</p>
+            </div>
         </div>
     </section>
 
-    <section class="md:tw-mt-14" id="Ringz">
-        <h1 class="loraFont tw-text-center tw-mt-10 tw-mb-5 tw-text-2xl md:tw-text-4xl">Shop by Style</h1>
-        <div class="BraceletSlide">
-            <div class="tw-border tw-p-1 tw-m-2 tw-text-center" v-for="item in items">
-                <img class="tw-mb-2 tw-w-full" :src="item.ima" alt="Bracelet">
-                <h5 class="tw-text-xs md:tw-text-2xl">{{item.title}}</h5>
-            </div>
-        </div>
+    <section>
+        <div class="md:tw-w-8/12 md:tw-mx-auto">
+            <h1 class="loraFont tw-text-center tw-mt-10 tw-mb-5 tw-text-2xl md:tw-text-4xl">Shop By Style</h1>
 
-        <div class="tw-flex tw-justify-center tw-py-3 md:tw-mt-5">
-            <button class="tw-border tw-border-gray-600 tw-font-bold tw-text-gray-600 tw-py-3 tw-px-10 tw-rounded-md tw-text-xs md:tw-text-base md:tw-font-semibold">Shop All Styles</button>
+            <div id="shopByStyle" class="tw-flex tw-justify-center tw-flex-wrap">
+                <div class="tw-w-28 tw-border tw-p-1 tw-m-2 md:tw-mx-2 tw-flex tw-flex-col tw-justify-center tw-items-center" v-for="data in images">
+                    <img class="tw-w-16 md:tw-w-20" :src="data.ima" alt="">
+                    <p class="tw-text-sm md:tw-text-base tw-w-20 md:tw-w-auto tw-text-center tw-mt-2">{{data.desc}}</p>
+                </div>
+            </div>
+
+            <div class="tw-flex tw-justify-center tw-py-3 md:tw-mt-5">
+                <button class="tw-border tw-border-gray-600 tw-font-bold tw-text-gray-600 tw-py-3 tw-px-10 tw-rounded-md tw-text-xs md:tw-text-base md:tw-font-semibold">Shop All Styles</button>
+            </div>
         </div>
     </section>
 
@@ -155,7 +156,7 @@
     </section>
 
     <section id="Shop_by_Fine_Metal">
-        <h1 class="loraFont tw-text-center tw-mt-10 tw-mb-5 tw-text-2xl md:tw-text-4xl">Shop by Fine Metal</h1>
+        <h1 class="loraFont tw-text-center tw-mt-10 tw-mb-5 tw-text-2xl md:tw-text-4xl">Shop by Metal</h1>
         <div class="tw-flex tw-flex-wrap tw-justify-center">
             <div class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-border tw-py-1 md:tw-py-5 tw-m-1 tw-text-center tw-w-24 md:tw-w-44 md:tw-m-2" v-for="item in items">
                 <img class="tw-mb-2 tw-w-16 md:tw-w-20" :src="item.ima" alt="Gold Metals">
@@ -166,10 +167,10 @@
     </section>
 
     <section id="Shop_by_Price_Range">
-        <h1 class="loraFont tw-text-center tw-mt-10 tw-mb-5 tw-text-2xl md:tw-text-4xl">Shop by Price Range</h1>
+        <h1 class="loraFont tw-text-center tw-mt-10 tw-mb-5 tw-text-2xl md:tw-text-4xl">Shop by Price</h1>
         <div class="tw-flex tw-flex-col md:tw-flex-row tw-flex-wrap tw-justify-center tw-items-center">
-            <div class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-border tw-py-3 md:tw-py-5 tw-m-1 tw-text-center tw-w-60 md:tw-w-60 md:tw-h-60 md:tw-font-semibold md:tw-m-2 hover:tw-bg-gray-100" v-for="item in items">
-                <h5 class="tw-text-xs md:tw-text-2xl md:tw-mt-3 tw-text-red-800 md:tw-text-gray-800">{{item.price}}</h5>
+            <div class="tw-flex tw-flex-col tw-justify-center tw-items-center tw-border tw-py-3 md:tw-py-5 tw-m-1 tw-text-center tw-w-56 md:tw-w-56 md:tw-h-12 md:tw-font-semibold md:tw-my-5 md:tw-m-2 hover:tw-bg-gray-100" v-for="item in items" v-for="item in items">
+                <h5 class="tw-text-xs md:tw-text-xl tw-text-red-800 md:tw-text-gray-800">{{item.price}}</h5>
             </div>
         </div>
 
@@ -373,20 +374,7 @@
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
     <script>
-        var app = new Vue({
-            el:'#otherproducts',
-            data: {
-                items: [
-                    {ima:'./images/imagee1.svg', desc:'Engagement'},
-                    {ima:'./images/imagee2.svg', desc:'Earrings'},
-                    {ima:'./images/imagee3.svg', desc:'Wedding'},
-                    {ima:'./images/imagee4.svg', desc:'Bracelets'},
-                    // {ima:'./images/imagee5.svg', desc:'Rings'},
-                    {ima:'./images/imagee6.svg', desc:'Mens'},
-                    {ima:'./images/imagee7.svg', desc:'Necklaces'}
-                ]
-            }
-        });
+        
         var app = new Vue({
             el:'#commitment',
             data: {
@@ -401,18 +389,37 @@
             }
         });
         var app = new Vue({
-            el:'#Best_sellers',
+            el: '#shopByStyle',
+            data: {
+                images: [
+                    {ima:'https://image.brilliantearth.com/static/img/channel/engagement/ring-design-styles/ir295/icon/Solitaire.svg', desc:'Halo'},
+                    {ima:'https://image.brilliantearth.com/static/img/channel/engagement/ring-design-styles/ir295/icon/Solitaire.svg', desc:'Double Halo'},
+                    {ima:'https://image.brilliantearth.com/static/img/channel/engagement/ring-design-styles/ir295/icon/Solitaire.svg', desc:'Three Stone'},
+                    {ima:'https://image.brilliantearth.com/static/img/channel/engagement/ring-design-styles/ir295/icon/Solitaire.svg', desc:'Straight'},
+                    {ima:'https://image.brilliantearth.com/static/img/channel/engagement/ring-design-styles/ir295/icon/Solitaire.svg', desc:'Solitaire'},
+                    {ima:'https://image.brilliantearth.com/static/img/channel/engagement/ring-design-styles/ir295/icon/Solitaire.svg', desc:'Three Stone Halo'},
+                    {ima:'https://image.brilliantearth.com/static/img/channel/engagement/ring-design-styles/ir295/icon/Solitaire.svg', desc:'Split Shank'},
+                    {ima:'https://image.brilliantearth.com/static/img/channel/engagement/ring-design-styles/ir295/icon/Solitaire.svg', desc:'Free Form'},
+                    {ima:'https://image.brilliantearth.com/static/img/channel/engagement/ring-design-styles/ir295/icon/Solitaire.svg', desc:'Wide band'},
+                        
+                ]
+            }
+        });
+
+        var app = new Vue({
+            el:'#bestSellers',
             data: {
                 items: [
-                    {ima:'./images/Rectangle.svg',title:'TB419OWB4JJ', desc:'18K White Gold Diamond Spikes Tennis Bracelet', price:'$ 1000'},
-                    {ima:'./images/Rectangle.svg',title:'TB419OWB4JJ', desc:'18K White Gold Diamond Spikes Tennis Bracelet', price:'$ 1000'},
-                    {ima:'./images/Rectangle.svg',title:'TB419OWB4JJ', desc:'18K White Gold Diamond Spikes Tennis Bracelet', price:'$ 1000'},
-                    {ima:'./images/Rectangle.svg',title:'TB419OWB4JJ', desc:'18K White Gold Diamond Spikes Tennis Bracelet', price:'$ 1000'},
-                    {ima:'./images/Rectangle.svg',title:'TB419OWB4JJ', desc:'18K White Gold Diamond Spikes Tennis Bracelet', price:'$ 1000'},
+                    {ima:'./images/Catalina.jpg',title:'Catalina', desc:'Twisted Diamond Engagement Ring'},
+                    {ima:'./images/Delilah.jpg',title:'Delilah'},
+                    {ima:'./images/Paige.jpg',title:'Paige'},
+                    {ima:'./images/Courtney.jpg',title:'Courtney'},
+                    {ima:'./images/Hallo_ring',title:'Chantal'},
 
                 ]
             }
         });
+        
 
         var app = new Vue({
             el:'#Ringz',
@@ -526,5 +533,44 @@
         });
     })
     </script>
+
+
+<script>
+    $(document).ready(function(){
+        $('.bestSellers').slick({
+            infinite: false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows:false,
+            // prevArrow:"<img class='tw-absolute tw-z-50 tw-bottom-[-70px] lg:tw-bottom-[-90px] tw-left-24 md:tw-left-24 lg:tw-left-48 tw-w-12 md:tw-w-16 a-left control-c prev slick-prev' src='./images/leftarrow.svg'>",
+            // nextArrow:"<img class='tw-absolute tw-z-50 tw-bottom-[-70px] lg:tw-bottom-[-90px] tw-left-44 md:tw-left-48 lg:tw-left-64 tw-w-12 md:tw-w-16 a-right control-c next slick-next' src='./images/rightarrow.svg'>",
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+})
+</script>
 </body>
 </html>
